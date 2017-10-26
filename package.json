@@ -1,0 +1,33 @@
+{
+  "name": "express-jwt",
+  "version": "1.0.0",
+  "description": "A playgound for Express with JSON Web Token.",
+  "author": "Roberto Achar <robertoachar@gmail.com>",
+  "homepage": "https://github.com/robertoachar/express-jwt#readme",
+  "keywords": [
+    "node",
+    "express",
+    "jwt"
+  ],
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertoachar/express-jwt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robertoachar/express-jwt/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "4.9.0",
+    "nodemon": "1.12.1"
+  },
+  "license": "MIT"
+}
