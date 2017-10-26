@@ -1,7 +1,7 @@
 {
   "name": "express-jwt",
   "version": "1.0.0",
-  "description": "A playgound for Express with JSON Web Token.",
+  "description": "A playground for Express and JSON Web Token.",
   "author": "Roberto Achar <robertoachar@gmail.com>",
   "homepage": "https://github.com/robertoachar/express-jwt#readme",
   "keywords": [
