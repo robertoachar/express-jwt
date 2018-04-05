@@ -19,7 +19,9 @@
     "url": "https://github.com/robertoachar/express-jwt/issues"
   },
   "dependencies": {
+    "@robertoachar/express-cors": "1.0.1",
     "body-parser": "1.18.2",
+    "compression": "1.7.2",
     "dotenv": "5.0.1",
     "express": "4.16.3",
     "helmet": "3.12.0",
