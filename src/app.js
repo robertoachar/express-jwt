@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const passport = require('passport');
 
 const auth = require('./auth');
+const config = require('./config');
 const error = require('./error');
 
 const app = express();
@@ -16,14 +17,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'DELETE, GET, OPTIONS, PATCH, PUT, POST');
+  res.header(
+    'Access-Control-Allow-Methods',
+    'DELETE, GET, OPTIONS, PATCH, PUT, POST'
+  );
   res.header('Access-Control-Allow-Headers', 'Authorization, Content-Type');
 
   if (req.method === 'OPTIONS') {
     return res.sendStatus(200);
   }
 
-  next();
+  return next();
 });
 
 auth.initAuth();
@@ -34,25 +38,25 @@ app.get('/', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-  const username = req.body.username;
-  const password = req.body.password;
+  const { username, password } = req.body;
 
   if (username === 'username' && password === 'password') {
     const payload = { id: '123456789', username: 'User' };
-    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 60 });
+    const token = jwt.sign(payload, config.JWT_SECRET, { expiresIn: 60 });
 
     res.json({ token });
-  }
-  else {
+  } else {
     res.json(401).json({ message: 'Invalid username/password' });
   }
 });
 
-app.get('/secret',
+app.get(
+  '/secret',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     res.send(req.user);
-  });
+  }
+);
 
 app.use(error.notFound);
 app.use(error.catchAll);

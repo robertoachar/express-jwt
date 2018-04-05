@@ -1,10 +1,8 @@
 const winston = require('winston');
 
-require('dotenv').config();
-
 const app = require('./app');
+const config = require('./config');
 
-app.listen(3000, () => {
-  winston.info(`Environment: ${process.env.NODE_ENV}`);
-  winston.info(`Express: ${process.env.PORT}`);
+app.listen(config.PORT, () => {
+  Object.keys(config).forEach((key) => winston.info(`${key}: ${config[key]}`));
 });
