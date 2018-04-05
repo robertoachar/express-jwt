@@ -22,10 +22,20 @@ $ npm install
 
 * Running scripts
 
-Action | Usage
----    | ---
-Starting development mode | `npm start`
-Linting code              | `npm run lint`
+| Action                    | Usage          |
+| ------------------------- | -------------- |
+| Starting development mode | `npm start`    |
+| Linting code              | `npm run lint` |
+
+* Environment variables
+
+Create a `.env` file in the root directory.
+
+```yml
+NODE_ENV=development
+PORT=3000
+JWT_SECRET=secret
+```
 
 # Docker
 
