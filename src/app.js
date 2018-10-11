@@ -17,7 +17,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-auth.initAuth();
+passport.use(auth);
 app.use(passport.initialize());
 
 app.use(router);

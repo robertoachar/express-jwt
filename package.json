@@ -1,12 +1,18 @@
 {
   "name": "express-jwt",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A playground for Express and JSON Web Token.",
   "author": "Roberto Achar <robertoachar@gmail.com>",
   "homepage": "https://github.com/robertoachar/express-jwt#readme",
-  "keywords": ["node", "express", "jwt"],
+  "keywords": [
+    "node",
+    "express",
+    "jwt"
+  ],
   "main": "src/index.js",
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "scripts": {
     "lint": "eslint src/**/*.js",
     "start": "nodemon src/index.js"
@@ -19,25 +25,25 @@
     "url": "https://github.com/robertoachar/express-jwt/issues"
   },
   "dependencies": {
-    "@robertoachar/express-cors": "1.0.1",
-    "body-parser": "1.18.2",
-    "compression": "1.7.2",
-    "dotenv": "5.0.1",
+    "@robertoachar/express-cors": "1.0.2",
+    "body-parser": "1.18.3",
+    "compression": "1.7.3",
+    "dotenv": "6.1.0",
     "express": "4.16.3",
-    "helmet": "3.12.0",
-    "jsonwebtoken": "8.2.1",
+    "helmet": "3.14.0",
+    "jsonwebtoken": "8.3.0",
     "passport": "0.4.0",
     "passport-jwt": "4.0.0",
-    "winston": "2.4.1"
+    "winston": "3.1.0"
   },
   "devDependencies": {
-    "eslint": "4.19.1",
-    "eslint-config-airbnb-base": "12.1.0",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-import": "2.10.0",
-    "eslint-plugin-prettier": "2.6.0",
-    "nodemon": "1.17.3",
-    "prettier": "1.11.1"
+    "eslint": "5.6.1",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "3.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "nodemon": "1.18.4",
+    "prettier": "1.14.3"
   },
   "license": "MIT"
 }
