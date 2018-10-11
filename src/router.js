@@ -13,14 +13,14 @@ router.get('/', (req, res) => {
 router.post('/login', (req, res) => {
   const { username, password } = req.body;
 
-  if (username === 'username' && password === 'password') {
-    const payload = { id: '123456789', username: 'User' };
-    const token = jwt.sign(payload, config.JWT_SECRET, { expiresIn: 60 });
-
-    res.json({ token });
-  } else {
-    res.json(401).json({ message: 'Invalid username/password' });
+  if (username !== 'username' || password !== 'password') {
+    return res.status(401).json({ message: 'Invalid username/password' });
   }
+
+  const payload = { id: '123456789', name: 'User' };
+  const token = jwt.sign(payload, config.JWT_SECRET, { expiresIn: 60 });
+
+  return res.json({ token });
 });
 
 router.get(
