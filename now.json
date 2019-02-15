@@ -1,0 +1,13 @@
+{
+  "name": "express-jwt-rn",
+  "alias": ["express-jwt-rn"],
+  "engines": {
+    "node": "10"
+  },
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "3000",
+    "JWT_SECRET": "S3CR3T"
+  },
+  "public": true
+}
