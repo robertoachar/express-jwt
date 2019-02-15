@@ -37,26 +37,6 @@ PORT=3000
 JWT_SECRET=secret
 ```
 
-# Docker
-
-- Build image
-
-```bash
-$ docker-compose build
-```
-
-- Start container
-
-```bash
-$ docker-compose up
-```
-
-- Stop container
-
-```bash
-$ docker-compose down
-```
-
 # Author
 
 [Roberto Achar](https://twitter.com/robertoachar)
